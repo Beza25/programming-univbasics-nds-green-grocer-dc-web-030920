@@ -115,7 +115,7 @@ def checkout(cart, coupons)
   
   new_cart = consolidate_cart(cart)
   discounted_cart = apply_clearance(apply_coupons(new_cart, coupons))
-  grand_total = 0
+  grand_total = 0.0
   i = 0 
   while i < discounted_cart.length do 
     grand_total += discounted_cart[i][:price] * discounted_cart[i][:count]
